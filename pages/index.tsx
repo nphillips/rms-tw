@@ -1,90 +1,60 @@
-import { Button } from '@ui/Button';
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import Image from 'next/image'
-import vercelLogo from "../assets/vercel.svg";
-
+import IconCaretDown16 from "../img/IconCaretDown16"
 
 const Home: NextPage = () => {
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center py-2">
-	
+    <div className="w-screen text-dark-on-surface-light bg-dark-surface-dark h-screen grid grid-cols-[52px_auto] grid-rows-[52px_auto_28px] overflow-hidden">
       <Head>
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
-
-
-      <main className="flex w-full flex-1 flex-col items-center justify-center px-20 text-center">
-        <h1 className="text-6xl font-bold">
-          Welcome to{' '}
-          <a className="text-blue-600" href="https://nextjs.org">
-            Next.js!
-          </a>
-        </h1>
-
-        <p className="mt-3 text-2xl">
-          Get started by editing{' '}
-          <code className="rounded-md bg-gray-100 p-3 font-mono text-lg">
-            pages/index.tsx
-          </code>
-        </p>
-
-        <div className="mt-6 flex max-w-4xl flex-wrap items-center justify-around sm:w-full">
-          <a
-            href="https://nextjs.org/docs"
-            className="mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Documentation &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Find in-depth information about Next.js features and its API.
-            </p>
-          </a>
-
-          <a
-            href="https://nextjs.org/learn"
-            className="mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Learn &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Learn about Next.js in an interactive course with quizzes!
-            </p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/canary/examples"
-            className="mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Examples &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Discover and deploy boilerplate example Next.js projects.
-            </p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className="mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Deploy &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+      <div className='bg-dark-surface-default row-span-3' />
+      <div className='bg-dark-surface-default' />
+      <div className="flex overflow-hidden">
+        <div className='flex flex-col flex-auto overflow-y-scroll overflow-x-hidden px-6 pb-36 text-dark-line-dark hover:text-dark-on-surface-dimmer transition duration-300 ease-in-out scrollbar-thin scrollbar-thumb-rounded scrollbar-thumb-curr scrollbar-track-dark-surface-default'>
+          <div className='flex mt-6 mb-5 items-center w-full ml-auto mr-auto gap-x-4 text-dark-on-surface-light'>
+            <div className="flex gap-x-2">
+              <button className="border-0 text-sm leading-5 items-center appearance-none bg-transparent rounded text-red-700 inline-flex cursor-pointer justify-center">
+                <div className="text-base font-semibold text-dark-on-surface-lightest">
+                  Equity
+                </div>
+                <div className="text-dark-on-surface-dim pl-2">
+                  <IconCaretDown16 className="fill-curr" />
+                </div>
+              </button>
+            </div>
+            <div className="flex overflow-hidden gap-x-2 border-1 items-center">
+              <div className="text-sm text-dark-on-surface-dim">Show</div>
+              <div className="items-center flex gap-x-1 overflow-y-hidden overflow-x-scroll text-dark-line-dark hover:text-dark-on-surface-dimmer scrollbar-thin scrollbar-thumb-rounded scrollbar-thumb-curr">
+                <button className="text-sm text-on-surface-highlight bg-dark-surface-darkest whitespace-nowrap pointer-events-none hover:bg-[#2E3744] transition duration-300 ease-in-out h-8 leading-5 cursor-pointer no-underline inline-flex whitespace-no-wrap items-center pl-3 pr-3 rounded"> 7 days </button>
+                <button className="text-sm text-on-surface-highlight bg-dark-surface-default whitespace-nowrap hover:bg-[#2E3744] transition duration-300 ease-in-out h-8 leading-5 cursor-pointer no-underline inline-flex whitespace-no-wrap items-center pl-3 pr-3 rounded"> MTD </button>
+                <button className="text-sm text-on-surface-highlight bg-dark-surface-default whitespace-nowrap hover:bg-[#2E3744] transition duration-300 ease-in-out h-8 leading-5 cursor-pointer no-underline inline-flex whitespace-no-wrap items-center pl-3 pr-3 rounded"> Pre month </button>
+                <button className="text-sm text-on-surface-highlight bg-dark-surface-default whitespace-nowrap hover:bg-[#2E3744] transition duration-300 ease-in-out h-8 leading-5 cursor-pointer no-underline inline-flex whitespace-no-wrap items-center pl-3 pr-3 rounded"> YTD </button>
+                <button className="text-sm text-on-surface-highlight bg-dark-surface-default whitespace-nowrap hover:bg-[#2E3744] transition duration-300 ease-in-out h-8 leading-5 cursor-pointer no-underline inline-flex whitespace-no-wrap items-center pl-3 pr-3 rounded"> 1m </button>
+                <button className="text-sm text-on-surface-highlight bg-dark-surface-default whitespace-nowrap hover:bg-[#2E3744] transition duration-300 ease-in-out h-8 leading-5 cursor-pointer no-underline inline-flex whitespace-no-wrap items-center pl-3 pr-3 rounded"> 3m </button>
+                <button className="text-sm text-on-surface-highlight bg-dark-surface-default whitespace-nowrap hover:bg-[#2E3744] transition duration-300 ease-in-out h-8 leading-5 cursor-pointer no-underline inline-flex whitespace-no-wrap items-center pl-3 pr-3 rounded"> 6m </button>
+              </div>
+            </div>
+            <div className="flex overflow-hidden gap-x-2 border-1 items-center flex-shrink-0">
+              <div className="text-sm text-dark-on-surface-dim">Frequency</div>
+              <div className="items-center flex gap-x-1">
+                <button className="text-sm border-2 border-solid border-dark-on-surface-dim text-on-surface-highlight bg-dark-surface-darkest whitespace-nowrap pointer-events-none hover:bg-[#2E3744] transition duration-300 ease-in-out h-8 leading-5 cursor-pointer no-underline inline-flex whitespace-no-wrap items-center pl-3 pr-3 rounded">
+                  <div>
+                  Daily
+                  </div>
+                  <div className="ml-2">
+                    <IconCaretDown16 className="fill-curr" />
+                  </div>
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
-      </main>
-
-      <footer className="flex h-24 w-full items-center justify-center border-t">
-        <a
-          className="flex items-center justify-center gap-2"
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <Image src={vercelLogo} alt="Vercel Logo" width={72} height={16} />
-        </a>
-      </footer>
+        <div className="flex flex-col overflow-y-scroll grow-0 shrink-0 basis-[436px]">
+        </div>
+      </div>
+      <div className='bg-dark-surface-default' />
     </div>
   )
 }
